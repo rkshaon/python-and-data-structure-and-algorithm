@@ -11,6 +11,8 @@
 # the key is hashed and the resulting hash indicates where 
 # the corresponding value is stored.
 
+# In Python, the Dictionary data types represent the implementation of hash tables.
+
 # Visual Example
 # https://d33wubrfki0l68.cloudfront.net/87075beeda9ac5cf3bc104aaca45d231ef42aaea/56f14/img/blog/data-structures/hash-tables/hash-table.png
 

@@ -1,8 +1,3 @@
-# count(x) - Returns the number of occurrences of element x in the list.
-# sort(key=None, reverse=False) - Sorts the list in ascending order. Optional arguments key and reverse allow customization of the sorting behavior.
-# reverse() - Reverses the order of elements in the list.
-# copy() - Returns a shallow copy of the list.
-
 # What is List?
 # In Python, a list is a built-in data structure that allows you to store 
 # and organize a collection of items in a particular order. A list is an 
@@ -54,4 +49,69 @@ print(last_fruit)  # Output: 'elderberry'
 print(f"After pop: {fruits}")  # Output: ['apple', 'banana', 'date']
 # Requires a index number, otherwise it will pop the last element
 
-# index(x[, start[, end]]) - Returns the index of the first occurrence of element x in the list. Optional arguments start and end specify the starting and ending positions for the search.
+# index(x[, start[, end]]) - returns the first occurrence of element in the list, optional arguments start and end specify the starting and ending positions for the search.
+my_list = ['Cat', 'Dog', 'Elephant', 'Cat', 123, 'Cat', 1]
+my_list.index('Cat') # 0
+my_list.index('Elephant') # 2
+# start optional arg
+my_list.index('Cat', 1) # 3
+# end optional arg
+my_list.index('Cat', 4, 6) # 5
+print(f"After search index of 'Cat': {my_list.index('Cat')}")
+print(f"After search index of 'Elephant': {my_list.index('Elephant')}")
+print(f"After search index of 'Cat' using start arg: {my_list.index('Cat', 1)}")
+print(f"After search index of 'Cat' using end arg: {my_list.index('Cat', 4, 6)}")
+
+# count(x) - Returns the number of occurrences of element x in the list.
+fruits = ["apple", "banana", "cherry", "apple", "banana", "cherry"]
+fruits.count("cherry") # 2
+print(f"After count: {fruits.count('cherry')}")
+
+# sort(key=None, reverse=False) - Sorts the list in ascending order. Optional arguments key and reverse allow customization of the sorting behavior.
+cars = ['Ford', 'BMW', 'Volvo', 'Mazda']
+cars.sort() # ['BMW', 'Ford', 'Mazda', 'Volvo']
+print(f"After sort: {cars}")
+cars.sort(reverse=True) # ['Volvo', 'Mazda', 'Ford', 'BMW']
+print(f"After sort reverse: {cars}")
+
+# Here we want sort by the length of the item
+def myFunc(e):
+  return len(e)
+
+cars = ['Ford', 'Mitsubishi', 'BMW', 'VW', 'Volkswagen']
+cars.sort(key=myFunc) # ['VW', 'BMW', 'Ford', 'Mitsubishi', 'Volkswagen]
+print(f"After sort using key: {cars}")
+cars.sort(key=myFunc, reverse=True) # ['Mitsubishi', 'Volkswagen', 'Ford', 'BMW', 'VW']
+print(f"After sort using key and reverse: {cars}")
+
+# Here we want to sort by year of the item
+def myFunc(e):
+  return e['year']
+
+cars = [
+  {'car': 'Ford', 'year': 2005},
+  {'car': 'Mitsubishi', 'year': 2000},
+  {'car': 'BMW', 'year': 2019},
+  {'car': 'VW', 'year': 2011}
+]
+
+cars.sort(key=myFunc) # [{'car': 'Mitsubishi', 'year': 2000}, {'car': 'Ford', 'year': 2005}, {'car': 'VW', 'year': 2011}, {'car': 'BMW', 'year': 2019}]
+print(f"After sort using key: {cars}")
+cars.sort(key=myFunc, reverse=True) # [{'car': 'BMW', 'year': 2019}, {'car': 'VW', 'year': 2011}, {'car': 'Ford', 'year': 2005}, {'car': 'Mitsubishi', 'year': 2000}]
+print(f"After sort using key and reverse: {cars}")
+
+# reverse() - Reverses the order of elements in the list
+fruits = ['apple', 'banana', 'cherry']
+fruits.reverse() # ['cherry', 'banana', 'apple']
+print(f"After reverse: {fruits}")
+
+# copy() - Returns a shallow copy of the list
+# The copy() method returns a copy of the specified list.
+fruits = ['apple', 'banana', 'cherry', 'orange']
+x = fruits.copy() # ['apple', 'banana', 'cherry', 'orange']
+print(f"After copy: {fruits, x}")
+
+# clear() - The clear() method removes all the elements from a list
+fruits = ['apple', 'banana', 'cherry', 'orange']
+fruits.clear() # []
+print(f"After clear: {fruits}")

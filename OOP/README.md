@@ -9,6 +9,8 @@ Object oriented programming (OOP) in Python is a programming paradigm that uses 
 - Modularity
 
 # Class
+In Python, a class is a blueprint for creating objects (instances) that share similar attributes and behavior. It provides a way to define and organize code in a structured manner, allowing you to create reusable and modular code.
+Class [Example]([https://pages.github.com/](https://github.com/rkshaon/data-structure-and-algorithm-and-python-tricks/blob/master/OOP/1_class.py)).
 
 # Object
 

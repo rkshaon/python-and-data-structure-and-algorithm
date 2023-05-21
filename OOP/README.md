@@ -59,7 +59,7 @@ Multiple Inheritance: Some languages support multiple inheritance, where a deriv
 
 Inheritance promotes code reuse, modularity, and extensibility. It allows you to create a hierarchy of classes, with more specialized subclasses inheriting from more general base classes. This approach facilitates the organization and maintenance of code by grouping related functionality together and reducing duplication.
 
-Inheritance [Example)(https://github.com/rkshaon/python-and-data-structure-and-algorithm/blob/master/OOP/3_inheritance.py).
+Inheritance [Example](https://github.com/rkshaon/python-and-data-structure-and-algorithm/blob/master/OOP/3_inheritance.py).
 
 # Polymorphism
 

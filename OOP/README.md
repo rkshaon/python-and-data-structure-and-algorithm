@@ -48,6 +48,19 @@ Inheritance promotes code reuse, modularity, and extensibility. It allows you to
 Inheritance [Example](https://github.com/rkshaon/python-and-data-structure-and-algorithm/blob/master/OOP/3_inheritance.py).
 
 # Polymorphism
+Polymorphism is a core concept in object-oriented programming (OOP) that allows objects of different classes to be treated as objects of a common superclass. It enables the same code to be used with different types of objects, providing flexibility and extensibility in software design.
+
+Polymorphism involves the following key ideas:
+- Inheritance: Polymorphism relies on inheritance to create a hierarchical relationship between classes. By defining a common superclass and deriving multiple subclasses from it, polymorphism allows objects of these subclasses to be treated as instances of the superclass.
+- Method Overriding: Polymorphism is often achieved through method overriding. Subclasses can override methods inherited from the superclass, providing their own implementation while keeping the method signature (name and parameters) the same. This allows different subclasses to have specialized behavior for the same method.
+- Method Invocation: Polymorphism enables objects of different classes to be invoked using the same method name. The actual behavior of the method is determined dynamically at runtime based on the actual type of the object being referenced.
+- Interface Compatibility: Polymorphism requires that the objects involved exhibit interface compatibility. This means that they share a common set of methods or behaviors defined in a common superclass or interface. The code that interacts with these objects can use the methods defined in the common interface, regardless of the specific type of object.
+
+The key benefit of polymorphism is that it allows for code reuse, extensibility, and flexibility. It promotes modular and flexible designs by allowing different classes to conform to a common interface and be used interchangeably where the common interface is expected.
+
+Polymorphism [Example](https://github.com/rkshaon/python-and-data-structure-and-algorithm/blob/master/OOP/4_polymorphism.py).
+
+
 
 # Encapsulation
 

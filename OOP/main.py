@@ -1,3 +1,7 @@
+import csv
+
+
+
 class Item:
     # Note
     # Class has magic methods, and magic attributes
@@ -34,13 +38,23 @@ class Item:
         # self.price = self.price * Item.pay_rate
         # Here accessing from instance level, so value will be update at instance level
         self.price = self.price * self.pay_rate
+    
+
+    @classmethod
+    def instantiate_from_csv(cls):
+        with open('items.csv', 'r') as f:
+            reader = csv.DictReader(f)
+            items = list(reader)
+        
+        for item in items:
+            print(item)
 
     
 
-
-item1 = Item(name="iPhone", price=150, quantity=5)
-item2 = Item(name="MacBook", price=1000, quantity=3)
-item3 = Item(name=1, price=100, quantity=5)
+Item.instantiate_from_csv()
+# item1 = Item(name="iPhone", price=150, quantity=5)
+# item2 = Item(name="MacBook", price=1000, quantity=3)
+# item3 = Item(name=1, price=100, quantity=5)
 
 # print(item1.name)
 # print(item2.name)
@@ -56,4 +70,4 @@ item3 = Item(name=1, price=100, quantity=5)
 # item2.apply_discount()
 # print(item2.price)
 
-print(Item.all)
+# print(Item.all)

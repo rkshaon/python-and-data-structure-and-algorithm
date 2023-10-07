@@ -1,4 +1,5 @@
 import csv
+import os
 
 
 
@@ -42,16 +43,23 @@ class Item:
 
     @classmethod
     def instantiate_from_csv(cls):
-        with open('items.csv', 'r') as f:
+        file_path = os.path.join(os.getcwd(), 'OOP/items.csv')
+        
+        with open(file_path, 'r') as f:
             reader = csv.DictReader(f)
             items = list(reader)
         
         for item in items:
-            print(item)
+            Item(
+                name=item.get('name'), 
+                price=float(item.get('price')), 
+                quantity=int(item.get('quantity'))
+            )
 
     
 
 Item.instantiate_from_csv()
+print(Item.all)
 # item1 = Item(name="iPhone", price=150, quantity=5)
 # item2 = Item(name="MacBook", price=1000, quantity=3)
 # item3 = Item(name=1, price=100, quantity=5)
